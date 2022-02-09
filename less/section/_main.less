@@ -168,7 +168,7 @@
 .merit {
   position: relative;
   background-image: url(../img/back-fon.png);
-  background-position: 436px -115px;
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
   margin-bottom: 225px;
@@ -540,6 +540,51 @@
         right: 0;
         bottom: 0;
         z-index: 99;
+      }
+      &:hover {
+        .m1 {
+          display: none;
+        }
+        .hide-block {
+          display: block;
+        }
+      }
+      .m1 {
+        position: absolute;
+        bottom: 15px;
+        left: 25px;
+        z-index: 99;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      .hide-block {
+        display: none;
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        width: 327px;
+        z-index: 99;
+        .p1 {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 38px;
+          text-transform: uppercase;
+          color: #ffffff;
+          margin-bottom: 61px;
+        }
+        .p2 {
+          //   display: none;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 21px;
+          color: #ffffff;
+        }
       }
     }
   }

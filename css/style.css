@@ -188,7 +188,7 @@
 .merit {
   position: relative;
   background-image: url(../img/back-fon.png);
-  background-position: 436px -115px;
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
   margin-bottom: 225px;
@@ -521,6 +521,48 @@
   right: 0;
   bottom: 0;
   z-index: 99;
+}
+.education .content .box:hover .m1 {
+  display: none;
+}
+.education .content .box:hover .hide-block {
+  display: block;
+}
+.education .content .box .m1 {
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  z-index: 99;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.education .content .box .hide-block {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  width: 327px;
+  z-index: 99;
+}
+.education .content .box .hide-block .p1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 61px;
+}
+.education .content .box .hide-block .p2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
 }
 .modals {
   margin-bottom: 177px;
@@ -918,154 +960,144 @@
   line-height: 26px;
   color: #424242;
 }
-.main-courses .courses .category {
+.main-courses .courses .profile {
   margin-bottom: 56px;
 }
-.main-courses .courses .category .parent {
+.main-courses .courses .profile ul {
+  height: 53px;
+  border: 1px solid #c7f8c2;
+  box-shadow: 0px 4px 4px rgba(202, 202, 202, 0.1);
+  padding-left: 0;
+  list-style: none;
   display: flex;
   justify-content: space-between;
-  background: #ffffff;
-  border: 1px solid #c7f8c2;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(202, 202, 202, 0.1);
-  height: 53px;
-  list-style: none;
 }
-.main-courses .courses .category .parent li {
-  display: flex;
-  flex-grow: 1;
+.main-courses .courses .profile ul .profile-list {
   position: relative;
-}
-.main-courses .courses .category .parent li:first-child {
-  flex-grow: 0;
-  width: 202px;
-}
-.main-courses .courses .category .parent li a {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-grow: 1;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 18px;
   color: #424242;
-  text-decoration: none;
-  flex-grow: 1;
 }
-.main-courses .courses .category .parent li:not(:last-child) {
-  border: 1px solid #c7f8c2;
+.main-courses .courses .profile ul .profile-list:first-child {
+  width: 202px;
+  flex-grow: 0;
 }
-.main-courses .courses .category .parent .active {
+.main-courses .courses .profile ul .profile-list:not(:last-child) {
+  border-right: 1px solid #c7f8c2;
+}
+.main-courses .courses .profile ul .profile-list:hover .lists {
+  display: block;
+}
+.main-courses .courses .profile ul .profile-list .lists {
+  display: none;
+  position: absolute;
+  box-sizing: border-box;
+  z-index: 99;
+  flex-direction: column;
+  top: 100%;
+  height: auto;
+  left: 0;
+  padding: 24px 22px;
+  width: 100%;
+  background-color: #fff;
+}
+.main-courses .courses .profile ul .profile-list .lists .list {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #424242;
+  margin-bottom: 17px;
+  padding: 9px 0;
+}
+.main-courses .courses .profile ul .active {
   background: #c7f8c2;
 }
 .main-courses .courses .carts-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 200px;
+  margin-top: 100px;
 }
-.main-courses .courses .carts-wrapper .cart {
-  width: 359px;
-  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+.main-courses .courses .carts-wrapper .lesson-card {
   margin-bottom: 59px;
 }
-.main-courses .courses .carts-wrapper .cart .t1 {
-  display: flex;
-  flex-direction: column;
-  padding: 16px 23px 0 16px;
+.main-courses .courses .carts-wrapper .lesson-card .cart {
+  width: 359px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
 }
-.main-courses .courses .carts-wrapper .cart .t1 .t1-1 {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 11px;
-}
-.main-courses .courses .carts-wrapper .cart .t1 .t1-1 .h2 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .t1 {
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
   color: #424242;
   opacity: 0.8;
+  padding-left: 16px;
+  margin-bottom: 23px;
 }
-.main-courses .courses .carts-wrapper .cart .t1 .t1-2 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .t2 {
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
+  font-size: 32px;
   line-height: 100%;
   letter-spacing: -0.4px;
-  color: #55a630;
-  margin-bottom: 22px;
+  color: #1d8195;
+  margin-bottom: 25px;
+  padding-left: 16px;
 }
-.main-courses .courses .carts-wrapper .cart .t1 .t1-3 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .t3 {
   width: 166px;
-  background: #55a630;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 9px;
-  font-style: normal;
+  margin-left: 23px;
+  border: none;
+  background: #00a896;
   font-weight: 600;
   font-size: 20px;
   line-height: 20px;
   color: #ffffff;
-  opacity: 0.8;
-  border: none;
-  padding: 8px 0 12px 0;
-  margin-bottom: 22px;
+  margin-bottom: 34px;
 }
-.main-courses .courses .carts-wrapper .cart .t1 .t1-4 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .t4 {
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 20px;
   color: #424242;
   opacity: 0.8;
+  padding-left: 17px;
 }
-.main-courses .courses .carts-wrapper .cart .t1 .blue {
-  background: #4340b4;
-}
-.main-courses .courses .carts-wrapper .cart .t1 .blue-color {
-  color: #4340b4;
-}
-.main-courses .courses .carts-wrapper .cart .t1 .color-text {
-  color: #1d8195;
-}
-.main-courses .courses .carts-wrapper .cart .t1 .color-btn {
-  background: #00a896;
-}
-.main-courses .courses .carts-wrapper .cart .t2 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .t5 {
   display: flex;
-  align-items: center;
-  padding: 0 23px 0 27px;
-  margin-bottom: 65px;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 13px 0 28px;
+  margin-bottom: 55px;
 }
-.main-courses .courses .carts-wrapper .cart .t2 .t2-1 {
-  position: relative;
-  width: 156px;
-  font-style: normal;
-  font-weight: normal;
+.main-courses .courses .carts-wrapper .lesson-card .cart .t5 .text {
+  border-left: 2px solid #00a896;
+  width: 138px;
+  padding-left: 9px;
   font-size: 15px;
-  line-height: 25px;
+  line-height: 24px;
   color: #424242;
   opacity: 0.8;
-  margin-right: 15px;
+  margin-bottom: 12px;
 }
-.main-courses .courses .carts-wrapper .cart .t2 .t2-1::before {
-  content: "";
-  top: -5px;
-  left: -10px;
-  width: 2px;
-  height: 112px;
-  position: absolute;
-  opacity: 0.8;
+.main-courses .courses .carts-wrapper .lesson-card .cart .t5 .image {
+  width: 137px;
+  height: 160px;
 }
-.main-courses .courses .carts-wrapper .cart .t2 .blue-before::before {
-  background: #5351c4;
-}
-.main-courses .courses .carts-wrapper .cart .t2 .green:before {
-  background: #55a630;
-}
-.main-courses .courses .carts-wrapper .cart .t2 .color-before::before {
-  background: #00a896;
-}
-.main-courses .courses .carts-wrapper .cart .t3 .t3-1 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .t6 {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1075,51 +1107,39 @@
   margin-bottom: 14px;
   padding-left: 17px;
 }
-.main-courses .courses .carts-wrapper .cart .t3 .t3-2 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .btn {
+  background: #00a896;
+  padding: 16px 0 15px 0;
+  border: none;
   width: 100%;
-  padding: 15px 0 16px 0;
-  background: #55a630;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
-  align-items: center;
   text-align: center;
   color: #ffffff;
-  border: none;
 }
-.main-courses .courses .carts-wrapper .cart .t3 .t3-3 {
+.main-courses .courses .carts-wrapper .lesson-card .cart a {
+  display: block;
+  padding: 16px 0 15px 0;
+  background: rgba(0, 168, 150, 0.1);
+  text-decoration: none;
   width: 100%;
-  padding: 15px 0 16px 0;
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
-  align-items: center;
   text-align: center;
-  color: #55a630;
-  border: none;
+  color: #00a896;
 }
-.main-courses .courses .carts-wrapper .cart .t3 .blue {
-  background: #4340b4;
-}
-.main-courses .courses .carts-wrapper .cart .t3 .blue-color {
-  color: #4340b4;
-  background: rgba(83, 81, 196, 0.1);
-}
-.main-courses .courses .carts-wrapper .cart .t3 .color-text {
-  color: #1d8195;
-}
-.main-courses .courses .carts-wrapper .cart .t3 .color-btn {
-  background: #00a896;
-}
-.main-courses .courses .carts-wrapper .cart .r1 .r1-img {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r1 .r1-img {
   position: relative;
+  min-height: 242px;
 }
-.main-courses .courses .carts-wrapper .cart .r1 .r1-img img {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r1 .r1-img img {
   display: flex;
 }
-.main-courses .courses .carts-wrapper .cart .r1 .r1-img:before {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r1 .r1-img:before {
   content: "";
   position: absolute;
   background: rgba(35, 35, 35, 0.5);
@@ -1130,7 +1150,7 @@
   bottom: 0;
   z-index: 99;
 }
-.main-courses .courses .carts-wrapper .cart .r1 .r1-wrapper {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r1 .r1-wrapper {
   position: absolute;
   top: 50%;
   right: 50%;
@@ -1141,14 +1161,7 @@
   align-items: center;
   flex-direction: column;
 }
-.main-courses .courses .carts-wrapper .cart .r1 .r1-wrapper .btn {
-  padding: 17px 18px 17px 24px;
-  background: #85bf80;
-  border: none;
-  border-radius: 50%;
-  margin-bottom: 16px;
-}
-.main-courses .courses .carts-wrapper .cart .r1 .r1-wrapper span {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r1 .r1-wrapper span {
   width: 175px;
   font-style: normal;
   font-weight: 500;
@@ -1157,17 +1170,17 @@
   color: #ffffff;
   opacity: 0.8;
 }
-.main-courses .courses .carts-wrapper .cart .r2 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r2 {
   padding: 36px 0 41px 21px;
 }
-.main-courses .courses .carts-wrapper .cart .r2 .p1 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r2 .p1 {
   margin-bottom: 100px;
 }
-.main-courses .courses .carts-wrapper .cart .r3 {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r3 {
   display: flex;
   flex-direction: column;
 }
-.main-courses .courses .carts-wrapper .cart .r3 .btn-buy {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r3 .btn-buy {
   padding: 16px 0 15px 0;
   background: #55a630;
   font-style: normal;
@@ -1177,14 +1190,13 @@
   color: #ffffff;
   border: none;
 }
-.main-courses .courses .carts-wrapper .cart .r3 a {
+.main-courses .courses .carts-wrapper .lesson-card .cart .r3 a {
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
   text-align: center;
   color: #55a630;
-  border-radius: 8px;
   background: #ecf9eb;
   text-decoration: none;
   padding: 16px 0 16px 0;
